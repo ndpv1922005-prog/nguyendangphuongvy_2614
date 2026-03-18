@@ -23,9 +23,9 @@ caesar_cipher = CaesarCipher()
 def caesar_encrypt():
     data = request.json
     plain_text = data['plain_text']
-    key = data['key']
+    key = int(data['key'])
 
-    encrypted_text = caesar_cipher.caesar_encrypt(plain_text, key)
+    encrypted_text = caesar_cipher.encrypt_text(plain_text, key)
 
     return jsonify({'encrypted_text': encrypted_text})
 
@@ -34,9 +34,9 @@ def caesar_encrypt():
 def caesar_decrypt():
     data = request.json
     cipher_text = data['cipher_text']
-    key = data['key']
+    key = int(data['key'])
 
-    decrypted_text = caesar_cipher.caesar_decrypt(cipher_text, key)
+    decrypted_text = caesar_cipher.decrypt_text(cipher_text, key)
 
     return jsonify({'decrypted_text': decrypted_text})
 
