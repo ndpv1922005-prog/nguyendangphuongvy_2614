@@ -55,7 +55,7 @@ def rsa_verify_signature():
     data = request.json
     message = data['message']
     signature_hex = data['signature']
-    public_key, private_key = rsa_cipher.load_keys()
+    private_key, public_key = rsa_cipher.load_keys()
     signature = bytes.fromhex(signature_hex)
     is_verified = rsa_cipher.verify(message, signature, public_key)
     return jsonify({'is_verified': is_verified})

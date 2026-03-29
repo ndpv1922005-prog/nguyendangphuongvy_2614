@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/ecc.ui'
+# Form implementation generated from reading ui file './ui/ecc.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -10,8 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -20,23 +18,23 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(160, 20, 301, 61))
+        self.label.setGeometry(QtCore.QRect(220, 10, 241, 61))
         font = QtGui.QFont()
-        font.setPointSize(36)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(24)
+        font.setBold(False)
+        font.setWeight(50)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(30, 90, 121, 31))
         font = QtGui.QFont()
-        font.setPointSize(16)
+        font.setPointSize(11)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(30, 280, 111, 31))
         font = QtGui.QFont()
-        font.setPointSize(16)
+        font.setPointSize(11)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.txt_info = QtWidgets.QTextEdit(self.centralwidget)
@@ -48,34 +46,29 @@ class Ui_MainWindow(object):
         self.btn_gen_keys = QtWidgets.QPushButton(self.centralwidget)
         self.btn_gen_keys.setGeometry(QtCore.QRect(480, 42, 131, 31))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(11)
         self.btn_gen_keys.setFont(font)
         self.btn_gen_keys.setObjectName("btn_gen_keys")
         self.btn_sign = QtWidgets.QPushButton(self.centralwidget)
         self.btn_sign.setGeometry(QtCore.QRect(200, 460, 131, 31))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(11)
         self.btn_sign.setFont(font)
         self.btn_sign.setObjectName("btn_sign")
         self.btn_verify = QtWidgets.QPushButton(self.centralwidget)
         self.btn_verify.setGeometry(QtCore.QRect(480, 460, 131, 31))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(11)
         self.btn_verify.setFont(font)
         self.btn_verify.setObjectName("btn_verify")
-        # MainWindow.setCentralWidget(self.centralwidget)
-        # self.menubar = QtWidgets.QMenuBar(MainWindow)
-        # self.menubar.setGeometry(QtCore.QRect(0, 0, 726, 21))
-        # self.menubar.setObjectName("menubar")
-        # MainWindow.setMenuBar(self.menubar)
-        # self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        # self.statusbar.setObjectName("statusbar")
-        # MainWindow.setStatusBar(self.statusbar)
-
-        # For QWidget
-        layout = QtWidgets.QVBoxLayout(MainWindow)
-        layout.addWidget(self.centralwidget)
-        MainWindow.setLayout(layout)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 726, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
